@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="2.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        #scroll
+        {
+            width:100%;
+            height:100%;
+            background-color:white;
+            position:absolute;
+            top:0;
+            border-bottom:1px solid blue;
+        }
+        #scroll ul
+        {
+            /*position: absolute;*/
+            /*top:0;*/
+            /*left: 0;*/
+            position: relative;
+            margin-top:0px ;
+            height:400px;
+            list-style:none;
+        }
+        #scroll ul li
+        {
+            /*position: absolute;*/
+            width:1220px;
+            height:400px;
+            /*top:0 ;*/
+            margin-left:-40px;
+            padding:0px;
+            display:none;
+        }
+    </style>
+    <script type="text/javascript">
+        /*轮播*/
+        $(function(){
+            var i=0;
+            var len=$("#scroll ul li").length-1;
+            $(".subl").click(function(){
+                if(i==len){
+                    i=-1;
+                }
+                i++;
+                $("#scroll ul li").eq(i).fadeIn().siblings().hide();
+            });
+//到这里分开！上面的是上一张点击的效果代码，下面的是下一张点击的效果代码．
+            $(".subr").click(function(){//获取类名的点击事件．
+                if(i==0){
+                    i=len+1;
+                }
+                i--;
+                $("#scroll ul li").eq(i).fadeIn().siblings().hide();
+            });
+        });
+        /*轮播*/
+    </script>
+</head>
+<body>
+<div id="page">
+<div id="top">
+    <div id="logo"><img src="images/logo.png"></div>
+    <div id="search">
+        <span class="kecheng">
+            <span id="kecheng">课程</span>
+            <b id="antri"></b>
+        </span>
+        <div id="search-box">
+            <input type="text" value="搜索课程">
+        </div>
+        <input type="image" id="button" src="images/search2.png" style="height: 34px;width: 34px;float: right">
+    </div>
+    <div id="userinfo">
+        <ul>
+            <li style="margin-left: 10px;"><img src="images/small.jpg" style="border-radius: 15px;" ></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vbXk.">登录/注册</a></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vY2FydC5odG0.">购物车</a></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vbWVzc2FnZS9tc2dMaXN0Lmh0bQ..">消息</a></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vbXk.">我的学习</a></li>
+        </ul>
+    </div>
+</div>
+<div id="nav">
+    <div id="scroll">
+    <ul>
+        <li style="background:red; display: block"></li>
+        <li style="background:green;"></li>
+        <li style="background:gray;"></li>
+        <li style="background:orange;"></li>
+    </ul>
+        <p class="subl">上一张<p/>
+        <p class="subr">下一张<p/>
+        <p class="lbtn" id="j-lbtn" class="subl">上一张</p>
+        <p class="rbtn" id="j-rbtn" class="subr">下一张</p>
+    </div>
+    <div>
+
+    </div>
+    <div>
+        <div class="menu" id="menu">
+            <div class="items">
+                <div class="item" id="item1">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="编程开发_左侧类目框" target="_blank" href="/category/it" data-name="编程开发" class="f-f0 first">编程开发</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item" id="item2">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="办公效率_左侧类目框" target="_blank" href="/category/office-productivity" data-name="办公效率" class="f-f0 first">办公效率</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item cur" id="item3">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="产品和设计_左侧类目框" target="_blank" href="/category/design" data-name="产品和设计" class="f-f0 first">产品和设计</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item" id="item4">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="生活方式_左侧类目框" target="_blank" href="/category/lifestyle" data-name="生活方式" class="f-f0 first">生活方式</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item" id="item5">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="职业发展_左侧类目框" target="_blank" href="/category/occupation" data-name="职业发展" class="f-f0 first">职业发展</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item last" id="item6">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="市场营销_左侧类目框" target="_blank" href="/category/marketing" data-name="市场营销" class="f-f0 first">市场营销</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

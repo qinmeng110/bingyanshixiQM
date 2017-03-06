@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding:0;
+}
+#page{
+    width: 1220px;
+    margin: 0 auto;
+}
+#top{
+    height: 120px;
+}
+#top #logo{
+    width: 500px;
+    height: 100px;
+    float: left;
+    margin-left: -60px;
+}
+#userinfo{
+    width: 500px;
+    float: right;
+    padding: 35px 0px;
+}
+#userinfo ul{
+    list-style: none;
+}
+#userinfo ul li{
+    float: right;
+    text-align: center;
+    margin-left: 26px;
+    line-height: 36px;
+}
+#userinfo ul li a{
+    text-decoration: none;
+    color: black;
+    float: right;
+    font-size: 14px;
+}
+#userinfo ul li a:hover{
+    color: green;
+}
+#search{
+    /*margin-top: 50px;*/
+    position: absolute;
+    top: 50px;
+    left: 600px;
+    height: 35px;
+    width: 300px;
+    border: 1px solid green;
+    float: left;
+    /*margin: 7px auto;*/
+}
+.kecheng #kecheng{
+    /*float: left;*/
+    line-height: 35px;
+    margin-left: 9px;
+}
+.kecheng #antri{
+    /*float: left;*/
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-width: 6px 4px;
+    border-top-color: #666;
+    display: inline-block;
+    right: 0;
+    top: 4px;
+    position: relative;
+}
+#search-box{
+    float: left;
+    /*margin-right:40px;*/
+    position: relative;
+}
+#search-box input{
+    border: 1px solid green;
+    position: absolute;
+    top: 0;
+    left: 62px;
+    width: 200px;
+    height: 32px;
+    /*margin: 5px 0px;*/
+}
+#search-box input #button{
+    position: absolute;
+    top:0;
+    right: 0;
+
+}
+#nav{
+    /*margin-top: 20px;*/
+    margin: 0 auto;
+    width: 1220px;
+    height: 400px;
+    border: 1px solid red;
+    position: relative;
+}
+#nav #menu{
+    position: absolute;
+    top:0;
+    left:0;
+    padding-left:50px;
+    background-color: rgba(7,17,27,.5);
+    opacity: .502;
+    width: 174px;
+    height: 400px;
+    z-index: 1;
+}
+#nav a{
+    text-decoration: none;
+    color: white;
+}
+#nav .item{
+    height: 50px;
+}
+#nav #j-lbtn{
+    position: absolute;
+    left: 224px;
+    height: 70px;
+    width: 40px;
+    top: 50%;
+    margin-top: -35px;
+    background: url(images/l-r.png) no-repeat 0 0;
+    z-index: 100;
+}
+#nav #j-rbtn{
+    position: absolute;
+    /*left: 920px;*/
+    height: 70px;
+    right: 0;
+    width: 40px;
+    top: 50%;
+    margin-top: -35px;
+    background: url(images/l-r.png) no-repeat 0 0;
+    background-position: -66px 0;
+    z-index: 100;
+}
