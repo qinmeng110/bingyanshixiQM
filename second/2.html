@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="2.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        #scroll
+        {
+            width:100%;
+            height:100%;
+            background-color:white;
+            position:absolute;
+            top:0;
+            border-bottom:1px solid blue;
+        }
+        #scroll ul
+        {
+            /*position: absolute;*/
+            /*top:0;*/
+            /*left: 0;*/
+            position: relative;
+            margin-top:0px ;
+            height:400px;
+            list-style:none;
+        }
+        #scroll ul li
+        {
+            /*position: absolute;*/
+            width:1220px;
+            height:400px;
+            /*top:0 ;*/
+            margin-left:-40px;
+            padding:0px;
+            display:none;
+        }
+    </style>
+    <script type="text/javascript">
+        /*轮播*/
+        $(function(){
+            var i=0;
+            var len=$("#scroll ul li").length-1;
+            $(".subl").click(function(){
+                if(i==len){
+                    i=-1;
+                }
+                i++;
+                $("#scroll ul li").eq(i).fadeIn().siblings().hide();
+            });
+//到这里分开！上面的是上一张点击的效果代码，下面的是下一张点击的效果代码．
+            $(".subr").click(function(){//获取类名的点击事件．
+                if(i==0){
+                    i=len+1;
+                }
+                i--;
+                $("#scroll ul li").eq(i).fadeIn().siblings().hide();
+            });
+        });
+        /*轮播*/
+    </script>
+</head>
+<body>
+<div id="page">
+<div id="top">
+    <div id="logo"><img src="images/logo.png"></div>
+    <div id="search">
+        <span class="kecheng">
+            <span id="kecheng">课程</span>
+            <b id="antri"></b>
+        </span>
+        <div id="search-box">
+            <input type="text" value="搜索课程">
+        </div>
+        <input type="image" id="button" src="images/search2.png" style="height: 34px;width: 34px;float: right">
+    </div>
+    <div id="userinfo">
+        <ul>
+            <li style="margin-left: 10px;"><img src="images/small.jpg" style="border-radius: 15px;" ></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vbXk.">登录/注册</a></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vY2FydC5odG0.">购物车</a></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vbWVzc2FnZS9tc2dMaXN0Lmh0bQ..">消息</a></li>
+            <li><a href="http://study.163.com/member/login.htm?returnUrl=aHR0cDovL3N0dWR5LjE2My5jb20vbXk.">我的学习</a></li>
+        </ul>
+    </div>
+</div>
+<div id="nav">
+    <div id="scroll">
+    <ul>
+        <li style="background:red; display: block"></li>
+        <li style="background:green;"></li>
+        <li style="background:gray;"></li>
+        <li style="background:orange;"></li>
+    </ul>
+        <!--<p class="subl">上一张<p/>-->
+        <!--<p class="subr">下一张<p/>-->
+        <p class="lbtn" id="j-lbtn" class="subl">上一张</p>
+        <p class="rbtn" id="j-rbtn" class="subr">下一张</p>
+    </div>
+    <div></div>
+    <div>
+        <div class="menu" id="menu">
+            <div class="items">
+                <div class="item" id="item1">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="编程开发_左侧类目框" target="_blank" href="/category/it" data-name="编程开发" class="f-f0 first">编程开发</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item" id="item2">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="办公效率_左侧类目框" target="_blank" href="/category/office-productivity" data-name="办公效率" class="f-f0 first">办公效率</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item cur" id="item3">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="产品和设计_左侧类目框" target="_blank" href="/category/design" data-name="产品和设计" class="f-f0 first">产品和设计</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item" id="item4">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="生活方式_左侧类目框" target="_blank" href="/category/lifestyle" data-name="生活方式" class="f-f0 first">生活方式</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item" id="item5">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="职业发展_左侧类目框" target="_blank" href="/category/occupation" data-name="职业发展" class="f-f0 first">职业发展</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="item j-item last" id="item6">
+                    <div class="curbg"></div>
+                    <div class="inn">
+                        <p>
+                            <a data-index="市场营销_左侧类目框" target="_blank" href="/category/marketing" data-name="市场营销" class="f-f0 first">市场营销</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="box1">
+    <div class="m-micro" id="j-micro">
+            <div class="g-flow f-pr">
+                <div class="f-cb m-micro-wrap">
+                    <div class="cntwrap" id="j-cntwrap">
+                        <div class="cntlist" id="j-cntlist" style="margin-left: -735px;">
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001137001.htm" data-index="微专业点击" data-name="C++开发工程师_侯捷大师亲自教学" target="_blank">
+                                    <div class="imgbox f-icon icon-e62c f-fl"></div>
+                                    <div class="tit f-f0 f-thide">C++开发工程师</div>
+                                    <div class="tip f-f0 f-thide">侯捷大师亲自教学</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001170001.htm" data-index="微专业点击" data-name="新任管理者_源自中欧国际工商学院" target="_blank">
+                                    <div class="imgbox f-icon icon-e629 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">新任管理者</div>
+                                    <div class="tip f-f0 f-thide">源自中欧国际工商学院</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/85003.htm" data-index="微专业点击" data-name="产品经理_网易亿级产品负责人亲授" target="_blank">
+                                    <div class="imgbox f-icon icon-e628 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">产品经理</div>
+                                    <div class="tip f-f0 f-thide">网易亿级产品负责人亲授</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://study.163.com/topics/mysql_dba/" data-index="微专业点击" data-name="MySQL数据库工程师_网易一线DBA团队打造" target="_blank">
+                                    <div class="imgbox f-icon icon-e62f f-fl"></div>
+                                    <div class="tit f-f0 f-thide">MySQL数据库工程师</div>
+                                    <div class="tip f-f0 f-thide">网易一线DBA团队打造</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001168002.htm" data-index="微专业点击" data-name="Android开发工程师_4个月从入门到精通" target="_blank">
+                                    <div class="imgbox f-icon icon-e62b f-fl"></div>
+                                    <div class="tit f-f0 f-thide">Android开发工程师</div>
+                                    <div class="tip f-f0 f-thide">4个月从入门到精通</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/85001.htm" data-index="微专业点击" data-name="独立音乐制作人_最易懂的音乐制作课程" target="_blank">
+                                    <div class="imgbox f-icon icon-e900 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">独立音乐制作人</div>
+                                    <div class="tip f-f0 f-thide">最易懂的音乐制作课程</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001168001.htm" data-index="微专业点击" data-name="iOS开发工程师_网易一线资深开发工程师亲授" target="_blank">
+                                    <div class="imgbox f-icon icon-e62e f-fl"></div>
+                                    <div class="tit f-f0 f-thide">iOS开发工程师</div>
+                                    <div class="tip f-f0 f-thide">网易一线资深开发工程师亲授</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/28001.htm" data-index="微专业点击" data-name="自由职业摄影师_培养一个能赚钱的爱好" target="_blank">
+                                    <div class="imgbox f-icon icon-e61a f-fl"></div>
+                                    <div class="tit f-f0 f-thide">自由职业摄影师</div>
+                                    <div class="tip f-f0 f-thide">培养一个能赚钱的爱好</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001127001.htm" data-index="微专业点击" data-name="产品运营_运营大咖强强联合" target="_blank">
+                                    <div class="imgbox f-icon icon-e913 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">产品运营</div>
+                                    <div class="tip f-f0 f-thide">运营大咖强强联合</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001195002.htm" data-index="微专业点击" data-name="新媒体视频导演_让业余拍片儿的你变专业" target="_blank">
+                                    <div class="imgbox f-icon icon-e926 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">新媒体视频导演</div>
+                                    <div class="tip f-f0 f-thide">让业余拍片儿的你变专业</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001180001.htm" data-index="微专业点击" data-name="Python Web开发工程师_快速上手的全栈训练营" target="_blank">
+                                    <div class="imgbox f-icon icon-e917 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">Python Web开发工程师</div>
+                                    <div class="tip f-f0 f-thide">快速上手的全栈训练营</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001201003.htm" data-index="微专业点击" data-name="Java应用基础_浙大翁恺老师亲授" target="_blank">
+                                    <div class="imgbox f-icon icon-e901 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">Java应用基础</div>
+                                    <div class="tip f-f0 f-thide">浙大翁恺老师亲授</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001113001.htm" data-index="微专业点击" data-name="UI设计师_网易UEDC首席设计师亲授" target="_blank">
+                                    <div class="imgbox f-icon icon-e912 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">UI设计师</div>
+                                    <div class="tip f-f0 f-thide">网易UEDC首席设计师亲授</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://mooc.study.163.com/smartSpec/detail/1001122002.htm" data-index="微专业点击" data-name="测试工程师_打造最专业的测试人" target="_blank">
+                                    <div class="imgbox f-icon icon-e635 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">测试工程师</div>
+                                    <div class="tip f-f0 f-thide">打造最专业的测试人</div>
+                                </a>
+                            </div>
+                            <div class="item f-fl">
+                                <a href="http://study.163.com/topics/java_web/" data-index="微专业点击" data-name="Java 开发工程师_浙大Java男神翁恺执教" target="_blank">
+                                    <div class="imgbox f-icon icon-e901 f-fl"></div>
+                                    <div class="tit f-f0 f-thide">Java 开发工程师</div>
+                                    <div class="tip f-f0 f-thide">浙大Java男神翁恺执教</div>
+                                </a>
+                            </div>
+                            <div class="larr f-pa" id="j-larr"></div>
+                            <div class="rarr f-pa" id="j-rarr"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="free">
+<div id="f-logo"></div>
+<div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div id="changxiao">
+    <div id="cx-top" class="box-top">
+        <h2>畅销好课</h2>
+        <a><span>更多</span>
+            <span class="icn"></span>
+        </a>
+    </div>
+    <div id="cx-pic" class="pic1">
+        <div id="cx-content" class="content1">
+            <div id="cx-left" class="p-left1"></div>
+            <div id="cx-right" class="p-right1">
+            <div id="cx-r1" class="right1"></div>
+            <div id="cx-r2" class="right1"></div>
+            <div id="cx-r3" class="right1"></div>
+            <div id="cx-r4" class="right1"></div>
+            <div id="cx-r5" class="right1"></div>
+            <div id="cx-r6" class="right1"></div>
+            </div>
+        </div>
+        <div id="cx-sild" class="sild1"></div>
+    </div>
+</div>
+    <div id="mingshi">
+        <div id="mingshi-top" class="box-top">
+            <h2>名师大咖秀</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="mingshi-pic">
+            <div id="mingshi-content" class="content">
+                <!--<div id="mingshi-left" class="p-left"></div>-->
+                <div id="mingshi-right" class="">
+                    <div id="mingshi-r1" class="right"></div>
+                    <div id="mingshi-r2" class="right"></div>
+                    <div id="mingshi-r3" class="right"></div>
+                    <div id="mingshi-r4" class="right"></div>
+                </div>
+            </div>
+            <div id="mingshi-sild" class="sild"></div>
+        </div>
+    </div>
+    <div id="bangong">
+        <div id="bg-top" class="box-top">
+            <h2>办公效率</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="bg-pic" class="pic2">
+            <div id="bg-content" class="content2">
+                <!--<div id="bg-left" class="p-left"></div>-->
+                <div id="bg-right" class="p-right2">
+                    <div id="bg-r1" class="right2"></div>
+                    <div id="bg-r2" class="right2"></div>
+                    <div id="bg-r3" class="right2"></div>
+                    <div id="bg-r4" class="right2"></div>
+                    <div id="bg-r5" class="right2"></div>
+                    <div id="bg-r6" class="right2"></div>
+                    <div id="bg-r7" class="right2"></div>
+                </div>
+            </div>
+            <div id="bg-sild" class="sild2"></div>
+        </div>
+    </div>
+    <div id="shichang">
+    <div id="sc-top" class="box-top">
+        <h2>市场营销</h2>
+        <a><span>更多</span>
+            <span class="icn"></span>
+        </a>
+    </div>
+    <div id="sc-pic" class="pic1">
+        <div id="sc-content" class="content1">
+            <div id="sc-left" class="p-left1"></div>
+            <div id="sc-right" class="p-right1">
+                <div id="sc-r1" class="right1"></div>
+                <div id="sc-r2" class="right1"></div>
+                <div id="sc-r3" class="right1"></div>
+                <div id="sc-r4" class="right1"></div>
+                <div id="sc-r5" class="right1"></div>
+                <div id="sc-r6" class="right1"></div>
+            </div>
+        </div>
+        <div id="sc-sild" class="sild1"></div>
+    </div>
+</div>
+    <div id="biancheng">
+        <div id="bc-top" class="box-top">
+            <h2>编程开发</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="bc-pic" class="pic2">
+            <div id="bc-content" class="content2">
+                <!--<div id="bg-left" class="p-left"></div>-->
+                <div id="bc-right" class="p-right2">
+                    <div id="bc-r1" class="right2"></div>
+                    <div id="bc-r2" class="right2"></div>
+                    <div id="bc-r3" class="right2"></div>
+                    <div id="bc-r4" class="right2"></div>
+                    <div id="bc-r5" class="right2"></div>
+                    <div id="bc-r6" class="right2"></div>
+                    <div id="bc-r7" class="right2"></div>
+                </div>
+            </div>
+            <div id="bc-sild" class="sild2"></div>
+        </div>
+    </div>
+    <div id="chanpin">
+        <div id="cp-top" class="box-top">
+            <h2>产品和设计</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="cp-pic" class="pic1">
+            <div id="cp-content" class="content1">
+                <div id="cp-left" class="p-left1"></div>
+                <div id="cp-right" class="p-right1">
+                    <div id="cp-r1" class="right1"></div>
+                    <div id="cp-r2" class="right1"></div>
+                    <div id="cp-r3" class="right1"></div>
+                    <div id="cp-r4" class="right1"></div>
+                    <div id="cp-r5" class="right1"></div>
+                    <div id="cp-r6" class="right1"></div>
+                </div>
+            </div>
+            <div id="cp-sild" class="sild1"></div>
+        </div>
+    </div>
+    <div id="zhiye">
+        <div id="zy-top" class="box-top">
+            <h2>职业发展</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="zy-pic" class="pic2">
+            <div id="zy-content" class="content2">
+                <!--<div id="bg-left" class="p-left"></div>-->
+                <div id="zy-right" class="p-right2">
+                    <div id="zy-r1" class="right2"></div>
+                    <div id="zy-r2" class="right2"></div>
+                    <div id="zy-r3" class="right2"></div>
+                    <div id="zy-r4" class="right2"></div>
+                    <div id="zy-r5" class="right2"></div>
+                    <div id="zy-r6" class="right2"></div>
+                    <div id="zy-r7" class="right2"></div>
+                </div>
+            </div>
+            <div id="zy-sild" class="sild2"></div>
+        </div>
+    </div>
+    <div id="shenghuo">
+        <div id="cx-top" class="box-top">
+            <h2>生活方式</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="cx-pic" class="pic1">
+            <div id="cx-content" class="content1">
+                <div id="cx-left" class="p-left1"></div>
+                <div id="cx-right" class="p-right1">
+                    <div id="cx-r1" class="right1"></div>
+                    <div id="cx-r2" class="right1"></div>
+                    <div id="cx-r3" class="right1"></div>
+                    <div id="cx-r4" class="right1"></div>
+                    <div id="cx-r5" class="right1"></div>
+                    <div id="cx-r6" class="right1"></div>
+                </div>
+            </div>
+            <div id="cx-sild" class="sild1"></div>
+        </div>
+    </div>
+    <div id="yuyan">
+        <div id="zy-top" class="box-top">
+            <h2>实用语言</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="zy-pic" class="pic2">
+            <div id="zy-content" class="content2">
+                <!--<div id="bg-left" class="p-left"></div>-->
+                <div id="zy-right" class="p-right2">
+                    <div id="zy-r1" class="right2"></div>
+                    <div id="zy-r2" class="right2"></div>
+                    <div id="zy-r3" class="right2"></div>
+                    <div id="zy-r4" class="right2"></div>
+                    <div id="zy-r5" class="right2"></div>
+                    <div id="zy-r6" class="right2"></div>
+                    <div id="zy-r7" class="right2"></div>
+                </div>
+            </div>
+            <div id="zy-sild" class="sild2"></div>
+        </div>
+    </div>
+    <div id="qinzi">
+        <div id="cx-top" class="box-top">
+            <h2>亲子启蒙</h2>
+            <a><span>更多</span>
+                <span class="icn"></span>
+            </a>
+        </div>
+        <div id="cx-pic" class="pic1">
+            <div id="cx-content" class="content1">
+                <div id="cx-left" class="p-left1"></div>
+                <div id="cx-right" class="p-right1">
+                    <div id="cx-r1" class="right1"></div>
+                    <div id="cx-r2" class="right1"></div>
+                    <div id="cx-r3" class="right1"></div>
+                    <div id="cx-r4" class="right1"></div>
+                    <div id="cx-r5" class="right1"></div>
+                    <div id="cx-r6" class="right1"></div>
+                </div>
+            </div>
+            <div id="cx-sild" class="sild1"></div>
+        </div>
+    </div>
+    <div id="guanggao">
+        <div id="g-left"></div>
+        <div id="g-right"></div>
+    </div>
+</div>
+<div id="hezuo"></div>
+<div id="footer"></div>
+</body>
+</html>

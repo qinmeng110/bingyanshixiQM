@@ -1,0 +1,380 @@
+body{
+    margin: 0;
+    padding:0;
+}
+#page{
+    width: 1220px;
+    margin: 0 auto;
+}
+#top{
+    height: 120px;
+}
+#top #logo{
+    width: 500px;
+    height: 100px;
+    float: left;
+    margin-left: -60px;
+}
+#userinfo{
+    width: 500px;
+    float: right;
+    padding: 35px 0px;
+}
+#userinfo ul{
+    list-style: none;
+}
+#userinfo ul li{
+    float: right;
+    text-align: center;
+    margin-left: 26px;
+    line-height: 36px;
+}
+#userinfo ul li a{
+    text-decoration: none;
+    color: black;
+    float: right;
+    font-size: 14px;
+}
+#userinfo ul li a:hover{
+    color: green;
+}
+#search{
+    /*margin-top: 50px;*/
+    position: absolute;
+    top: 50px;
+    left: 600px;
+    height: 35px;
+    width: 300px;
+    border: 1px solid green;
+    float: left;
+    /*margin: 7px auto;*/
+}
+.kecheng #kecheng{
+    /*float: left;*/
+    line-height: 35px;
+    margin-left: 9px;
+}
+.kecheng #antri{
+    /*float: left;*/
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-width: 6px 4px;
+    border-top-color: #666;
+    display: inline-block;
+    right: 0;
+    top: 4px;
+    position: relative;
+}
+#search-box{
+    float: left;
+    /*margin-right:40px;*/
+    position: relative;
+}
+#search-box input{
+    border: 1px solid green;
+    position: absolute;
+    top: 0;
+    left: 62px;
+    width: 200px;
+    height: 32px;
+    /*margin: 5px 0px;*/
+}
+#search-box input #button{
+    position: absolute;
+    top:0;
+    right: 0;
+
+}
+#nav{
+    /*margin-top: 20px;*/
+    margin: 0 auto;
+    width: 1220px;
+    height: 400px;
+    border: 1px solid red;
+    position: relative;
+}
+#nav #menu{
+    position: absolute;
+    top:0;
+    left:0;
+    padding-left:50px;
+    background-color: rgba(7,17,27,.5);
+    opacity: .502;
+    width: 174px;
+    height: 400px;
+    z-index: 1;
+}
+#nav a{
+    text-decoration: none;
+    color: white;
+}
+#nav .item{
+    height: 50px;
+}
+#nav #j-lbtn{
+    position: absolute;
+    left: 224px;
+    height: 70px;
+    width: 40px;
+    top: 50%;
+    margin-top: -35px;
+    background: url(images/l-r.png) no-repeat 0 0;
+    z-index: 100;
+}
+#nav #j-rbtn{
+    position: absolute;
+    /*left: 920px;*/
+    height: 70px;
+    right: 0;
+    width: 40px;
+    top: 50%;
+    margin-top: -35px;
+    background: url(images/l-r.png) no-repeat 0 0;
+    background-position: -66px 0;
+    z-index: 100;
+}
+.m-micro {
+    z-index: 9;
+    position: relative;
+    margin-bottom: 25px;
+}
+.m-index .g-flow {
+    min-width: 1205px;
+}
+.f-pr {
+    position: relative;
+}
+.g-flow {
+    width: 1205px;
+    margin: 0 auto;
+}
+.m-micro .m-micro-wrap {
+    border: 1px solid #dddddd;
+    border-top: none;
+    padding: 25px 0;
+    background-color: #fff;
+}
+.f-cb, .f-cbli li {
+    zoom: 1;
+}
+.m-micro .m-micro-wrap .cntwrap .cntlist {
+    width: 9999px;
+    height: 60px;
+}
+.m-micro .m-micro-wrap .item:first-child {
+    border-left: none;
+}
+.m-micro .m-micro-wrap .item {
+    border-left: 1px solid #dddddd;
+    width: 224px;
+    height: 60px;
+    padding: 0 8px;
+}
+.f-fl {
+    float: left;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+a, button {
+    cursor: pointer;
+}
+.m-micro .m-micro-wrap .item .imgbox {
+    text-align: center;
+    padding: 13px 0 10px 0;
+    font-size: 32px;
+    color: #2187e0;
+    width: 46px;
+    height: 46px;
+    margin-left: 15px;
+    margin-right: -82px;
+}
+.m-micro .m-micro-wrap .item .tit {
+    color: #333333;
+    width: 170px;
+    font-size: 16px;
+    margin-left: 62px;
+    margin-top: 10px;
+}
+.m-micro .m-micro-wrap .item .tip {
+    color: #999999;
+    width: 170px;
+    font-size: 12px;
+    margin-left: 62px;
+}
+.m-micro .m-micro-wrap .cntwrap .larr {
+    left: 1px;
+    top: 25px;
+    background-position: 0 -69px;
+}
+.m-micro .m-micro-wrap .cntwrap .larr, .m-micro .m-micro-wrap .cntwrap .rarr {
+    height: 60px;
+    width: 14px;
+    cursor: pointer;
+}
+.m-slide .sideNav2 .ilive, .m-slide .sideNav2 .ipractise, .m-slide .sideNav .bottomcnt .ilive, .m-slide .sideNav .bottomcnt .ipractise, .m-micro .m-micro-wrap .cntwrap .larr, .m-micro .m-micro-wrap .cntwrap .rarr {
+    background: url(images/index.png) no-repeat 9999px 9999px;
+}
+.f-pa {
+    position: absolute;
+}
+.m-micro .m-micro-wrap .cntwrap .rarr {
+    right: 0;
+    top: 25px;
+    background-position: -28px -69px;
+}
+.m-micro .m-micro-wrap .cntwrap .larr, .m-micro .m-micro-wrap .cntwrap .rarr {
+    height: 60px;
+    width: 14px;
+    cursor: pointer;
+}
+#free{
+    width:1225px;
+    height:205px;
+    border: 1px solid blue;
+    /*margin-bottom: 40px;*/
+}
+#free div{
+    width: 225px;
+    height: 185px;
+    border: 1px solid red;
+    float: left;
+    margin-right:22px;
+}
+#free div:last-child{
+    margin-right: 0;
+}
+.box-top{
+    margin-top: 40px;
+    position: relative;
+    height: 31px;
+}
+.box-top h2{
+    position: absolute;
+    top: -24px;
+    /*display: block;*/
+    width: 200px;
+    float: left;
+}
+.box-top a{
+    margin: auto 0;
+    float: right;
+}
+.icn {
+    float: right;
+    width: 18px;
+    height: 20px;
+    background: url("images/more.png") no-repeat -1px -1673px;
+    margin-left: 3px;
+}
+.pic1{
+    height: 486px;
+    border: 1px solid red;
+    position: relative;
+}
+.content1{
+    float: left;
+    height: 100%;
+    width: 975px;
+    border: 1px solid green;
+    margin-right: 245px;
+    /*position: relative;*/
+}
+.sild1{
+    position: absolute;
+    top:0;
+    right: 0;
+    border: 1px solid green;
+    width: 225px;
+    float: right;
+    height: 100%;
+}
+.p-left1{
+    float: left;
+    width: 225px;
+    height: 100%;
+    border: 1px solid black;
+}
+.right1{
+    margin-bottom: 30px;
+    margin-left: 22px;
+    width: 225px;
+    height: 225px;
+    float: left;
+    border: 1px solid yellow;
+}
+#mingshi-pic{
+    height: 240px;
+    border: 1px solid red;
+}
+#mingshi-right .right,
+#mingshi-sild{
+    float: left;
+    border: 1px solid green;
+    width: 240px;
+    height: 240px;
+    /*margin-right: 20px;*/
+}
+#mingshi-right .right:last-child{
+    /*margin-right: 0px;*/
+}
+.pic2{
+    position: relative;
+    height: 410px;
+    border: 1px solid red;
+}
+.content2{
+    width: 995px;
+    height: 100%;
+}
+.right2{
+    width: 225px;
+    height: 185px;
+    border: 1px solid blue;
+    float: left;
+    margin-right: 18px;
+    margin-bottom: 37px;
+}
+.sild2{
+    position: absolute;
+    top:0;
+    right: 0;
+    float: right;
+    width: 225px;
+    border: 1px solid black;
+    height: 100%;
+}
+.right2:first-child{
+    width: 470px;
+}
+#guanggao{
+    margin-top: 40px;
+    height: 133px;
+    border: 1px solid red;
+}
+#guanggao #g-left{
+    width: 960px;
+    float: left;
+    border: 1px solid green;
+    height: 100%;
+}
+#guanggao #g-right{
+    width: 225px;
+    height: 100%;
+    border: 1px solid black;
+    float: right;
+}
+#hezuo{
+    height: 175px;
+    border: 1px solid green;
+    margin-top: 40px;
+}
+#footer{
+    height: 298px;
+    border: 1px solid red;
+}
+
+
+
